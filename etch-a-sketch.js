@@ -1,21 +1,20 @@
 // set up grid 
-const row = 16;
-const col = 16;
+let dimensions = 16;
 
-function makeGrid(row,col) {
-    const newDiv = document.querySelector(`.container`);
+function makeGrid(dimensions) {
+    const container = document.querySelector(`.container`);
 
-    for (let i = 0; i < row; i++) {
-        let div = document.createElement('div.row');
-        div.classList.add('row');
-        newDiv.appendChild(div);
-        for (let j = 0; j < col; j++) {
-            div = document.createElement('div.row');
+    for (let i = 0; i < dimensions; i++) {
+        const parentDiv = document.createElement('div.parent');
+        parentDiv.classList.add('parentDiv');
+        for (let j = 0; j < dimensions; j++) {
+            let div = document.createElement('div.col');
             div.classList.add('col');
-            newDiv.appendChild(div);
+            parentDiv.appendChild(div);
         }
+        container.appendChild(parentDiv);
     }
 }
 //const div = document.createElement('div.row');
 //div.classList.add('row');
-console.log(makeGrid(row,col));
+console.log(makeGrid(dimensions));

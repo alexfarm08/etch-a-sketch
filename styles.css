@@ -9,16 +9,10 @@ body{
     flex-wrap: none;
 }
 
-.row {
-    display: flex;
-    width: 16px;
-    height: 16px;
-    background-color: red;
-}
-
 .col {
     display: flex;
     width: 16px;
     height: 16px;
     background-color: blue;
+    border: 10px solid black;
 }
